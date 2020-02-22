@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx-html
-        image: localhost/html
+        image: localhost/html:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 80
