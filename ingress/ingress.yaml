@@ -4,5 +4,5 @@ metadata:
   name: main-ingress
 spec:
   backend:
-    serviceName: nginx-html
+    serviceName: html-service
     servicePort: 80
