@@ -20,4 +20,4 @@ $(DEPLOYMENTS):
 	kubectl apply -f $@
 
 
-.PHONY: all $(MAKEFILES) $(DOCKERFILES) $(DEPLOYMENTS)
+.PHONY: all deploy $(MAKEFILES) $(DOCKERFILES) $(DEPLOYMENTS)
