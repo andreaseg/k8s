@@ -11,7 +11,7 @@ $(MAKEFILES):
 
 
 $(SUBDIRS):
-	podman build -t $@ $@/Dockerfile
+	podman build -t $@ $@
 	kubectl apply -f $@
 
 
