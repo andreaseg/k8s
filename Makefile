@@ -1,14 +1,18 @@
 
 
+MAKEFILES := $(wildcard */Makefile)
 SUBDIRS := $(wildcard */.)
 
 
-all: $(SUBDIRS)
+all: $(MAKEFILES) $(SUBDIRS)
+
+$(MAKEFILES):
+	$(MAKE) -C $@
+
 
 $(SUBDIRS):
-	$(MAKE) -C $@
 	podman build -t $@ $@/Dockerfile
 	kubectl apply -f $@
 
 
-.PHONY: all $(SUBDIRS)
+.PHONY: all $(MAKEFILES) $(SUBDIRS)
