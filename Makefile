@@ -11,4 +11,4 @@ $(SUBDIRS):
 	kubectl apply -f $@
 
 
-.PHONY all $(SUBDIRS)
+.PHONY: all $(SUBDIRS)
