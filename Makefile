@@ -7,7 +7,7 @@ SUBDIRS := $(wildcard */.)
 all: $(MAKEFILES) $(SUBDIRS)
 
 $(MAKEFILES):
-	$(MAKE) -C $@
+	$(MAKE) -C $(patsubst %/Makefile,%,$@)
 
 
 $(SUBDIRS):
