@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx-html
-        image: localhost:5000/html
+        image: html
         ports:
         - containerPort: 80
 ---
